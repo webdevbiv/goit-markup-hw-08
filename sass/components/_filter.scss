@@ -1,6 +1,10 @@
 .portfolio {
   padding-top: $section-padding;
   padding-bottom: $section-padding;
+  @media screen and (max-width: 1199.99px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .portfolio-filter__list {
