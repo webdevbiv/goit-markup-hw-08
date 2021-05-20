@@ -1,0 +1,48 @@
+%dev-outr {
+  border: 1px solid red;
+}
+
+%dev-outb {
+  border: 1px solid blue;
+}
+
+%grid-ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(#{$grid-item-margin} * -1);
+  margin-left: calc(#{$grid-item-margin} * -1);
+}
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+%title-white {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $text-color-darkbg;
+  margin-bottom: 20px;
+}
+
+%column {
+  display: flex;
+  flex-direction: column;
+}
+
+%form-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 1);
+  margin-bottom: 4px;
+}

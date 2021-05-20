@@ -1,0 +1,52 @@
+.portfolio {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+}
+
+.portfolio-filter__list {
+  display: flex;
+
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: 149.99px) and (max-width: 767.99px) {
+    margin-bottom: 55px;
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
+  @media screen and (min-width: 767.99px) and (max-width: 1199.99px) {
+    margin-bottom: 30px;
+  }
+}
+
+.portfolio-filter__item {
+  margin-right: 8px;
+  @media screen and (max-width: 767.99px) {
+    margin-bottom: 15px;
+  }
+}
+
+.portfolio-filter__button {
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.63;
+  cursor: pointer;
+  padding: 6px 22px;
+  background-color: $section-bg-color-secondary;
+  transition: background-color $transition-time $transition-function,
+    color $transition-time $transition-function,
+    box-shadow $transition-time $transition-function,
+    border-radius $transition-time $transition-function;
+
+  &:hover,
+  &:focus {
+    background-color: $text-color-accent;
+    color: $text-color-darkbg;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+  }
+}

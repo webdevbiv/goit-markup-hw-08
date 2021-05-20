@@ -1,0 +1,125 @@
+.border {
+  border-bottom: 1px solid rgba(236, 236, 236, 1);
+}
+
+.header {
+  display: flex;
+}
+
+.logo {
+  font-family: $fontfamily-logo;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+  margin-right: 93px;
+  display: flex;
+  align-items: center;
+}
+
+.logo_part1 {
+  color: $logo-color-first;
+  align-items: center;
+}
+
+.logo_part2 {
+  color: $logo-color-second;
+}
+
+.site-nav {
+  display: inline-flex;
+  align-items: center;
+}
+
+.site-nav__item {
+  position: relative;
+  display: inline-flex;
+  height: 80px;
+
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.site-nav__link {
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.14;
+  color: $text-color-main;
+  display: inline-flex;
+  height: 80px;
+  align-items: center;
+  @include transition-normal(color);
+
+  &:hover,
+  &:focus {
+    color: $text-color-accent;
+    @include transition-normal(color);
+  }
+}
+
+.site-nav__link-active {
+  color: $text-color-accent;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    bottom: -1px;
+    background-color: #2196f3;
+  }
+}
+
+.address-header {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.address-header__item {
+  display: flex;
+
+  &:not(:last-child) {
+    margin-right: $grid-item-margin;
+  }
+}
+
+.address-header__icon {
+  margin-right: 10px;
+  align-items: center;
+  fill: $icons-color-header;
+  @include transition-normal(fill);
+
+  &:hover,
+  &:focus {
+    fill: $icons-color-accent;
+    @include transition-normal(fill);
+  }
+
+  .address-header__link:hover &,
+  .address-header__link:focus & {
+    fill: $icons-color-accent;
+    @include transition-normal(fill);
+  }
+}
+
+.address-header__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $text-color-secondary;
+  @include transition-normal(color);
+
+  &:hover,
+  &:focus {
+    color: $text-color-accent;
+    @include transition-normal(color);
+  }
+}

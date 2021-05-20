@@ -1,0 +1,34 @@
+.benefits {
+  @media screen and (min-width: 60px) and (max-width: 1199.99px) {
+    display: none;
+  }
+  padding-bottom: $section-padding;
+}
+
+.benefits__title {
+  @extend %title;
+}
+
+.benefits__list {
+  @extend %grid-ul;
+}
+
+.benefits__item {
+  @include grid-item(3);
+  position: relative;
+}
+
+.benefits__overlay {
+  background-color: rgba(47, 48, 58, 0.8);
+  bottom: 0;
+  position: absolute;
+  padding: 27px 0;
+  width: 100%;
+}
+
+.benefits__text {
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: $text-color-darkbg;
+}

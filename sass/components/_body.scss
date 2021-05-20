@@ -1,0 +1,17 @@
+body {
+  font-family: $fontfamily-main;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $text-color-main;
+}
+
+.dev-outr {
+  border: 1px solid red;
+}
+
+.dev-outb {
+  border: 1px solid blue;
+}

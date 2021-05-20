@@ -1,0 +1,150 @@
+.footer {
+  background: $section-bg-color-footer;
+  padding: 60px 0 60px 0;
+}
+
+.footer__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__address {
+  margin-right: 70px;
+}
+
+.footer__logo {
+  display: flex;
+  font-family: $fontfamily-logo;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.footer__logo--blue {
+  color: $text-color-accent;
+}
+
+.footer__logo--white {
+  color: $text-color-darkbg;
+}
+
+.address__item {
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+.address__link {
+  color: $text-color-darkbg;
+  text-decoration: none;
+  font-style: normal;
+  @include transition-normal(color);
+
+  &:hover,
+  &:focus {
+    color: $text-color-accent;
+    @include transition-normal(color);
+  }
+}
+
+.address__link--grey {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer__social__title {
+  @extend %title-white;
+  font-size: 14px;
+  line-height: 1.14;
+}
+
+.footer__social__list {
+  @extend %flex-center;
+}
+
+.footer__social__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.footer__social__link {
+  @extend %flex-center;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  @include transition-normal(background-color);
+  &:hover,
+  &:focus {
+    background-color: $text-color-accent;
+  }
+}
+
+.footer__social__icon {
+  fill: $icons-color-darkbg;
+  width: 20px;
+  height: 20px;
+}
+
+.footer__social {
+  margin-right: 93px;
+}
+
+.subscribe-email {
+  margin-right: 12px;
+}
+
+.subscribe-email__label {
+  display: flex;
+  @extend %title-white;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.14;
+}
+
+.subscribe-email__input {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  background: $section-bg-color-footer;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+  @include transition-normal(border);
+
+  &:hover,
+  &:focus {
+    border: 1px solid $text-color-accent;
+    cursor: pointer;
+    outline: none;
+    @include transition-normal(border);
+  }
+}
+
+.subscribe-button {
+  margin-top: 34px;
+}
+
+.subscribe-button__style {
+  padding: 10px 29px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  @include transition-normal(background);
+}
+
+.subscribe-button__text {
+  @extend %flex-center;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.88;
+  margin-right: 10px;
+}
+.subscribe-button__icon {
+  width: 24px;
+  height: 24px;
+  fill: $icons-color-darkbg;
+}
