@@ -1,5 +1,6 @@
 @mixin grid-item($colums) {
-  flex-basis: calc((100% / #{$colums}) - #{$grid-item-margin});
+  //flex-basis: calc((100% / #{$columтs}) - #{$grid-item-margin});
+  flex-basis: calc((100% - #{$grid-item-margin} * #{$colums}) / #{$colums});
   margin-left: $grid-item-margin;
   margin-top: $grid-item-margin;
 }

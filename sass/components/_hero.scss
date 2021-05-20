@@ -14,6 +14,9 @@
   padding-bottom: 200px;
   margin-left: auto;
   margin-right: auto;
+  @media screen and (min-width: 49px) and (max-width: 1199.99px) {
+    padding: 118px 0 118px 0;
+  }
 }
 
 .hero__title {
@@ -25,8 +28,10 @@
   color: $text-color-darkbg;
   text-transform: uppercase;
   margin-bottom: 30px;
+  @media screen and (min-width: 50.99px) and (max-width: 1199.99px) {
+    font-size: 26px;
+  }
 }
-
 .hero__button {
   margin-left: auto;
   margin-right: auto;

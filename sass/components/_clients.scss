@@ -1,6 +1,9 @@
 .clients {
   padding-top: $section-padding;
   padding-bottom: $section-padding;
+  @media screen and (min-width: 60px) and (max-width: 1199.99px) {
+    padding: 60px 0 60px 0;
+  }
 }
 
 .clients__title {
