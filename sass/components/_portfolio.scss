@@ -6,6 +6,7 @@
 
 .portfolio-card__item {
   flex-basis: 100%;
+
   @media screen and (max-width: 767.99px) {
     &:not(:last-child) {
       margin-bottom: 30px;
@@ -20,18 +21,26 @@
 }
 
 .portfolio-card__link {
+  display: inline-block;
+  height: 100%;
   text-decoration: none;
   color: inherit;
-  @include transition-normal(box-shadow);
+  border: 1px solid rgba(238, 238, 238, 1);
 
   &:hover,
   &:focus {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
+    @include transition-normal(box-shadow);
   }
 }
 
 .portfolio-card--shadow-box {
+  display: block;
+  height: 100%;
+  outline: 1px solid red;
+  height: auto;
+  @include transition-normal(box-shadow);
 }
 
 .portfolio-card__overlay--relative {
@@ -81,8 +90,9 @@
 }
 
 .portfolio-card__project {
+  display: inline-block;
+  height: 100%;
   padding: 20px 24px;
-  border: 1px solid rgba(238, 238, 238, 1);
 }
 
 .portfolio-card__project__name {
