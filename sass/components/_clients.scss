@@ -16,14 +16,19 @@
 
 .clients__list {
   @extend %grid-ul;
-  @media screen and (min-width: 0px) and (max-width: 767.99px) {
+  @media screen and (min-width: 60px) and (max-width: 275.99px) {
+    display: grid;
+  }
+  @media screen and (min-width: 149px) and (max-width: 767.99px) {
   }
 }
 
 .clients__item {
   @include grid-item(6);
+  @media screen and (min-width: 60px) and (max-width: 275.99px) {
+  }
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 276px) {
     @include grid-item(2);
   }
 

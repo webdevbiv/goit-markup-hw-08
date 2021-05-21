@@ -220,7 +220,7 @@ html {
   margin-bottom: 50px;
 }
 
-.footer__social__title, .subscribe-email__label {
+.footer__social__title, .subscribe-email__title, .subscribe-email__label {
   font-weight: bold;
   text-transform: uppercase;
   color: #ffffff;
@@ -263,22 +263,19 @@ body {
   border: 1px solid blue;
 }
 
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
 .container {
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  background-color: aqua;
-}
-
-@media screen and (min-width: 480px) {
-  .container {
-    max-width: 480px;
-    padding-left: 15px;
-    padding-right: 15px;
-    background-color: olive;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -297,12 +294,6 @@ body {
     padding-right: 15px;
     background-color: blueviolet;
   }
-}
-
-*,
-::after,
-::before {
-  outline: 1px solid red;
 }
 
 .button {
@@ -799,6 +790,13 @@ body {
   }
 }
 
+@media screen and (min-width: 60px) and (max-width: 275.99px) {
+  .clients__list {
+    display: -ms-grid;
+    display: grid;
+  }
+}
+
 .clients__item {
   -ms-flex-preferred-size: calc((100% - 30px * 6) / 6);
       flex-basis: calc((100% - 30px * 6) / 6);
@@ -806,7 +804,7 @@ body {
   margin-top: 30px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 276px) {
   .clients__item {
     -ms-flex-preferred-size: calc((100% - 30px * 2) / 2);
         flex-basis: calc((100% - 30px * 2) / 2);
@@ -868,23 +866,44 @@ body {
   padding: 60px 0 60px 0;
 }
 
-.footer__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+@media screen and (min-width: 50px) and (max-width: 768px) {
+  .footer__row {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 450px;
+        grid-template-columns: 450px;
+  }
+  .footer__row div {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .footer__address {
   margin-right: 70px;
 }
 
+@media screen and (min-width: 50px) and (max-width: 768px) {
+  .footer__address {
+    display: inline-block;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}
+
 .footer__logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   font-family: "Raleway", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -892,6 +911,17 @@ body {
   line-height: 1.19;
   margin-bottom: 20px;
   text-decoration: none;
+}
+
+@media screen and (min-width: 50px) and (max-width: 768px) {
+  .footer__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .footer__logo--blue {
@@ -902,8 +932,27 @@ body {
   color: #ffffff;
 }
 
+.address__list {
+  display: -ms-grid;
+  display: grid;
+}
+
 .address__item:not(:last-child) {
   margin-bottom: 9px;
+}
+
+@media screen and (min-width: 50px) and (max-width: 768px) {
+  .address__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .address__item:not(:last-child) {
+    margin-bottom: 8px;
+  }
 }
 
 .address__link {
@@ -927,6 +976,23 @@ body {
 .footer__social__title {
   font-size: 14px;
   line-height: 1.14;
+}
+
+@media screen and (min-width: 50px) and (max-width: 768px) {
+  .footer__social__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 50px) and (max-width: 768px) {
+  .footer__social__list {
+    margin-bottom: 20px;
+  }
 }
 
 .footer__social__item:not(:last-child) {
@@ -956,8 +1022,37 @@ body {
   margin-right: 93px;
 }
 
+@media screen and (min-width: 50px) and (max-width: 768px) {
+  .footer__social {
+    margin-right: 0px;
+  }
+}
+
 .subscribe-email {
   margin-right: 12px;
+}
+
+@media screen and (min-width: 50px) and (max-width: 768px) {
+  .subscribe-email {
+    margin-right: 0;
+  }
+}
+
+.subscribe-email__title {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.14;
+}
+
+@media screen and (min-width: 50px) and (max-width: 768px) {
+  .subscribe-email__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .subscribe-email__label {
@@ -969,9 +1064,16 @@ body {
   line-height: 1.14;
 }
 
+@media screen and (min-width: 50px) and (max-width: 768px) {
+  .subscribe-email__label {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .subscribe-email__input {
   border: 1px solid rgba(255, 255, 255, 0.3);
-  width: 358px;
   height: 50px;
   padding: 15px 16px;
   border-radius: 4px;
@@ -993,8 +1095,35 @@ body {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-width: 50px) and (max-width: 768px) {
+  .subscribe-email__input {
+    display: -ms-grid;
+    display: grid;
+    width: 100%;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe-email__input {
+    width: 358px;
+  }
+}
+
 .subscribe-button {
   margin-top: 34px;
+}
+
+@media screen and (min-width: 50px) and (max-width: 768px) {
+  .subscribe-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .subscribe-button__style {
@@ -1003,6 +1132,12 @@ body {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   -webkit-transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 50px) and (max-width: 768px) {
+  .subscribe-button__style {
+    width: 200px;
+  }
 }
 
 .subscribe-button__text {
