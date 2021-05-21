@@ -2,23 +2,33 @@
   padding-top: $section-padding;
   padding-bottom: $section-padding;
   background: $section-bg-color-secondary;
-  @media screen and (min-width: 60px) and (max-width: 1199.99px) {
+  @media screen and (min-width: 50 px) and (max-width: 1199.99px) {
     padding: 60px 0 60px 0;
   }
 }
 
 .team__title {
   @extend %title;
-  @media screen and (min-width: 60px) and (max-width: 1199.99px) {
+  @media screen and (min-width: 50px) and (max-width: 1199.99px) {
     font-size: 28px;
     line-height: 1.18;
+    margin-bottom: 30px;
   }
 }
 
 .team__list {
-  @extend %grid-ul;
-  @media screen and (min-width: 60px) and (max-width: 767.99px) {
+  // @extend %grid-ul;
+  @media screen and (min-width: 50 px) and (max-width: 767.99px) {
+    display: flex;
+    justify-content: center;
     margin-left: 0;
+    margin-top: 30px;
+  }
+  @media screen and (min-width: 767.99px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(30px * -1);
+    margin-left: calc(30px * -1);
   }
 }
 
@@ -30,10 +40,9 @@
 
   flex-basis: 100%;
   @media screen and (min-width: 480px) {
-    max-width: 450px;
   }
 
-  @media screen and (min-width: 60px) and (max-width: 767.99px) {
+  @media screen and (min-width: 50 px) and (max-width: 767.99px) {
     &:not(:last-child) {
       margin-bottom: $grid-item-margin;
     }
