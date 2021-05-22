@@ -299,8 +299,13 @@ body {
     max-width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
-    background-color: blueviolet;
   }
+}
+
+*,
+::after,
+::before {
+  outline: 1px solid red;
 }
 
 .button {
@@ -1426,14 +1431,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 50px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-bottom: 50px;
 }
 
 @media screen and (min-width: 149.99px) and (max-width: 767.99px) {
   .portfolio-filter__list {
-    margin-bottom: 55px;
+    margin-bottom: 15px;
   }
 }
 
@@ -1484,6 +1489,20 @@ body {
   border-radius: 4px;
 }
 
+@media screen and (min-width: 60px) and (max-width: 767.99px) {
+  .portfolio-card__list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .portfolio-card__list:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
 .portfolio-card__item {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -1516,6 +1535,7 @@ body {
 .portfolio-card__link {
   display: inline-block;
   height: 100%;
+  width: 100%;
   text-decoration: none;
   color: inherit;
   border: 1px solid #eeeeee;
@@ -1531,14 +1551,14 @@ body {
 }
 
 .portfolio-card--shadow-box {
-  display: block;
-  height: 100%;
-  outline: 1px solid red;
-  height: auto;
-  -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  height: inherit;
+}
+
+@media screen and (min-width: 60px) and (max-width: 767.99px) {
+  .portfolio-card--shadow-box {
+    width: inherit;
+    height: inherit;
+  }
 }
 
 .portfolio-card__overlay--relative {
@@ -1550,7 +1570,8 @@ body {
 
 @media screen and (min-width: 60px) and (max-width: 767.99px) {
   .portfolio-card__img {
-    width: 450px;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -1605,7 +1626,7 @@ body {
 
 .portfolio-card__project {
   display: inline-block;
-  height: 100%;
+  width: 100%;
   padding: 20px 24px;
 }
 
@@ -1622,5 +1643,6 @@ body {
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: #757575;
+  z-index: 5;
 }
 /*# sourceMappingURL=main.css.map */

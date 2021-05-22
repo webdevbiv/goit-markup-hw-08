@@ -2,6 +2,15 @@
   @extend %grid-ul;
   @media screen and (max-width: 767.99px) {
   }
+  @media screen and (min-width: 60px) and (max-width: 767.99px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 0;
+    margin-top: 0;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .portfolio-card__item {
@@ -23,6 +32,7 @@
 .portfolio-card__link {
   display: inline-block;
   height: 100%;
+  width: 100%;
   text-decoration: none;
   color: inherit;
   border: 1px solid rgba(238, 238, 238, 1);
@@ -36,11 +46,11 @@
 }
 
 .portfolio-card--shadow-box {
-  display: block;
-  height: 100%;
-  outline: 1px solid red;
-  height: auto;
-  @include transition-normal(box-shadow);
+  height: inherit;
+  @media screen and (min-width: 60px) and (max-width: 767.99px) {
+    width: inherit;
+    height: inherit;
+  }
 }
 
 .portfolio-card__overlay--relative {
@@ -51,7 +61,8 @@
 
 .portfolio-card__img {
   @media screen and (min-width: 60px) and (max-width: 767.99px) {
-    width: 450px;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -91,7 +102,7 @@
 
 .portfolio-card__project {
   display: inline-block;
-  height: 100%;
+  width: 100%;
   padding: 20px 24px;
 }
 
@@ -108,4 +119,5 @@
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: $text-color-secondary;
+  z-index: 5;
 }
