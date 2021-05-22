@@ -302,12 +302,6 @@ body {
   }
 }
 
-*,
-::after,
-::before {
-  outline: 1px solid red;
-}
-
 .button {
   font-weight: bold;
   font-size: 16px;
