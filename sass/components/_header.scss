@@ -4,18 +4,50 @@
 
 .header {
   display: flex;
+  @media screen and (min-width: 149px) and (max-width: 767.9px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199.9px) {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }
 
 .logo {
   font-family: $fontfamily-logo;
   font-style: normal;
   font-weight: bold;
-  font-size: 26px;
-  line-height: 1.19;
   text-decoration: none;
-  margin-right: 93px;
   display: flex;
   align-items: center;
+
+  @media screen and (min-width: 149px) and (max-width: 479.9px) {
+    margin-right: 0px;
+    font-size: 24px;
+    line-height: 1.17;
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 767.9px) {
+    margin-right: 0px;
+    font-size: 24px;
+    line-height: 1.17;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199.9px) {
+    margin-right: 88px;
+    font-size: 24px;
+    line-height: 1.17;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .logo_part1 {
@@ -30,12 +62,16 @@
 .site-nav {
   display: inline-flex;
   align-items: center;
+
+  @media screen and (min-width: 149px) and (max-width: 767.9px) {
+    display: none;
+  }
 }
 
 .site-nav__item {
   position: relative;
-  display: inline-flex;
-  height: 80px;
+  display: inline-block;
+  height: auto;
 
   &:not(:last-child) {
     margin-right: 50px;
@@ -48,7 +84,7 @@
   line-height: 1.14;
   color: $text-color-main;
   display: inline-flex;
-  height: 80px;
+  height: auto;
   align-items: center;
   @include transition-normal(color);
 
@@ -68,22 +104,64 @@
     width: 100%;
     height: 4px;
     border-radius: 2px;
-    bottom: -1px;
+    bottom: -30px;
     background-color: #2196f3;
   }
 }
 
 .address-header {
   margin-left: auto;
-  display: flex;
-  align-items: center;
+  @media screen and (min-width: 149px) and (max-width: 767.9px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199.9px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .address-header__item {
-  display: flex;
+  @media screen and (min-width: 768px) and (max-width: 1199.9px) {
+    margin-right: 0;
+    display: inline-block;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    &:not(:last-child) {
+      margin-right: $grid-item-margin;
+    }
+  }
+}
 
-  &:not(:last-child) {
-    margin-right: $grid-item-margin;
+.address-header__icon--email {
+  @media screen and (min-width: 768px) and (max-width: 1199.9px) {
+    width: 14px;
+    height: 10px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+.address-header__icon--phone {
+  @media screen and (min-width: 768px) and (max-width: 1199.9px) {
+    width: 10px;
+    height: 14px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 10px;
+    height: 16px;
   }
 }
 
