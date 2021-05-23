@@ -79,15 +79,20 @@
   color: $text-color-darkbg;
   background-color: rgba(33, 150, 243, 0.9);
   letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
   transform: translateY(75%);
   @include transition-normal(opacity);
   @include transition-normal(transform);
 
-  @media screen and (min-width: 50px) and (max-width: 350px) {
+  @media screen and (min-width: 50px) and (max-width: 319.99px) {
+    padding: 10px 14px;
+  }
+  @media screen and (min-width: 320px) and (max-width: 479.99px) {
     padding: 15px 15px;
   }
-  @media screen and (min-width: 350px) and (max-width: 767.99px) {
-    padding: 110px 24px;
+  @media screen and (min-width: 480px) and (max-width: 767.99px) {
+    padding: 77px 24px;
   }
   @media screen and (min-width: 768px) and (max-width: 1199.99px) {
     padding: 43px 24px;

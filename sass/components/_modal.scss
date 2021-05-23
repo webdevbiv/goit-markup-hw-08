@@ -11,7 +11,7 @@
 
 .modal-window {
   background-color: $modal-window-background-color;
-  width: 528px;
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -21,6 +21,21 @@
   transform: translate(-50%, -50%) scale(1);
   transition: transform 500ms $transition-function;
 
+  @media screen and (min-width: 149px) and (max-width: 449.99px) {
+    width: 250;
+  }
+
+  @media screen and (min-width: 450px) and (max-width: 767.99px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199.99px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+  }
+
   .modal-window__backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(0.5);
     transition: transform 500ms $transition-function;
@@ -29,6 +44,9 @@
 
 .modal-window__container {
   padding: 40px;
+  @media screen and (min-width: 50px) and (max-width: 449.99px) {
+    padding: 20px;
+  }
 }
 
 .modal-window__button-close {
@@ -64,10 +82,18 @@
 .modal-window__title {
   color: rgba(33, 33, 33, 1);
   font-weight: bold;
-  font-size: 20px;
-  line-height: 1.5;
+
   text-align: center;
   margin-bottom: 12px;
+
+  @media screen and (min-width: 149px) and (max-width: 1199.99px) {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 20px;
+    line-height: 1.15;
+  }
 }
 
 .modal-form {
@@ -162,14 +188,19 @@
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30px;
+
+  @media screen and (min-width: 149px) and (max-width: 1199.99px) {
+    margin-bottom: 31px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 30px;
+  }
 }
 
 .moadal-form-checkbox__label {
   display: flex;
   align-items: center;
-  font-size: 14px;
-  line-height: 24px;
+
   color: $text-color-secondary;
 
   &::before {
@@ -200,6 +231,15 @@
   .moadal-form-checkbox__condition:focus + &::before {
     border: 2px solid $text-color-accent;
     border-radius: 4px;
+  }
+
+  @media screen and (min-width: 149px) and (max-width: 1199.99px) {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
   }
 }
 
