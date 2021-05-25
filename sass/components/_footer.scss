@@ -99,6 +99,7 @@
   color: $text-color-darkbg;
   text-decoration: none;
   font-style: normal;
+  text-align: center;
   @include transition-normal(color);
 
   &:hover,
