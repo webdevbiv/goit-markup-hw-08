@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
 </head>
 
-<body>
+<body data-menu-page>
     <header class="border">
         <div class="container ">
             <div class="header">
@@ -50,8 +50,78 @@
                         </a>
                     </li>
                 </ul>
+                <button class="mobile-menu__button" aria-expanded="false" aria-controls="menu-container"
+                    data-menu-button>
+                    <svg class="mobile-menu__icon" width="40" height="40" aria-label="Переключатель мобильного меню">
+                        <use class="mobile-menu__icon-menu mobile-menu__icon-size" href="./images/mobile.svg#icon-menu">
+                        </use>
+                        <use class="mobile-menu__icon-close mobile-menu__icon-size "
+                            href="./images/mobile.svg#icon-close"></use>
+                    </svg>
+                    <!-- <svg class="mobile-menu__icon">
+                            <use class="mobile-menu__icon-close mobile-menu__icon-size" href="./images/mobile.svg#icon-close"></use>
+                          </svg> -->
+                </button>
             </div>
         </div>
+        <div class="mobile-menu-window" id="menu-container" data-menu>
+            <div class="mobile-menu-window__container">
+                <ul class="mobile-menu-window__list list">
+                    <li class="mobile-menu-window__item">
+                        <a class="mobile-menu-window__link" href="./index.html">Студия</a>
+                    </li>
+                    <li class="mobile-menu-window__item">
+                        <a class="mobile-menu-window__link" href="./portfolio.html">Портфолио</a>
+                    </li>
+                    <li class="mobile-menu-window__item">
+                        <a class="mobile-menu-window__link " href="">Контакты</a>
+                    </li>
+                </ul>
+                <div class="mobile-menu-window__lower-content">
+                    <ul class="mobile-menu-window-address__list  list">
+                        <li class="mobile-menu-window-address__item ">
+                            <a class="mobile-menu-window-address__link mobile-menu-window-address__link--text-size-large"
+                                href="mailto:info@devstudio.com" target="_blank" rel="noopener noreferrer">
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                        <li class="mobile-menu-window-address__item">
+                            <a class="mobile-menu-window-address__link mobile-menu-window-address__link--text-size-small"
+                                href="tel:+380961111111" target="_blank" rel="noopener noreferrer">
+                                info@devstudio.com
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="mobile-menu-window-social_list list">
+                        <li class="mobile-menu-window-social__item">
+                            <a href="" class="mobile-menu-window-social__link" target="_blank"
+                                rel="noopener noreferrer">
+                                Instagram
+                            </a>
+                        </li>
+                        <li class="mobile-menu-window-social__item ">
+                            <a href="" class="mobile-menu-window-social__link" target="_blank"
+                                rel="noopener noreferrer">
+                                Twitter
+                            </a>
+                        </li>
+                        <li class="mobile-menu-window-social__item ">
+                            <a href="" class="mobile-menu-window-social__link" target="_blank"
+                                rel="noopener noreferrer">
+                                Facebook
+                            </a>
+                        </li>
+                        <li class="mobile-menu-window-social__item ">
+                            <a href="" class="mobile-menu-window-social__link" target="_blank"
+                                rel="noopener noreferrer">
+                                LinkedIn
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
     </header>
 
     <main>
@@ -364,8 +434,7 @@
                                         <source
                                             srcset="./images/portfolio/mobile/img-8.jpg 1x, ./images/portfolio/mobile/2x/img-8.jpg 2x"
                                             media="(max-width: 767.98px)" type="image/jpeg" />
-                                        <img class="portfolio-card__img" class="portfolio-card__img"
-                                            src="./images/portfolio/mobile/img-8.jpg"
+                                        <img class="portfolio-card__img" src="./images/portfolio/mobile/img-8.jpg"
                                             alt="Приложение: Growing Business">
                                     </picture>
                                     <div class="portfolio-card__overlay">
@@ -459,8 +528,8 @@
                 </div>
                 <div class="subscribe-button ">
                     <button type="submit" class="subscribe-button__style button">
-                        <div class="subscribe-button__text">Подписаться
-                        </div>
+                        <span class="subscribe-button__text">Подписаться
+                        </span>
                         <svg class="subscribe-button__icon">
                             <use href="./images/icons.svg#icon-sub"></use>
                         </svg>
@@ -472,7 +541,8 @@
 
 
     </footer>
-
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
