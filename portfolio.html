@@ -78,8 +78,21 @@
                         <a href="" class="portfolio-card__link" target="_blank" rel="noopener noreferrer">
                             <!-- <div class="portfolio-card--shadow-box"> -->
                             <div class="portfolio-card__overlay--relative">
-                                <img class="portfolio-card__img" class="portfolio-card__img"
-                                    src="./images/portfolio/img-01.jpg" alt="Веб-сайт: Технокряк">
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/desktop/img-01.jpg 1x, ./images/portfolio/desktop/x2/img.jpg x2"
+                                        media="(min-width: 1200px)" type="image/jpeg" />
+                                    <source
+                                        srcset="./images/portfolio/tablet/img.jpg 1x, ./images/portfolio/tablet/x2/img.jpg x2"
+                                        media="(min-width: 768px)" type="image/jpeg" />
+                                    <source
+                                        srcset="./images/portfolio/mobile/img.jpg 1x, ./images/portfolio/mobile/x2/img.jpg x2"
+                                        media="(max-width: 767.98px)" type="image/jpeg" />
+
+                                    <img class="portfolio-card__img" src="./images/portfolio/mobile/img.jpg"
+                                        alt="Веб-сайт: Технокряк">
+                                </picture>
+
                                 <div class="portfolio-card__overlay">
                                     <p class="portfolio-card__overlay__text">Технокряк это современная площадка
                                         распространения
@@ -101,8 +114,21 @@
                         <a href="" class="portfolio-card__link" target="_blank" rel="noopener noreferrer">
                             <div class="portfolio-card--shadow-box">
                                 <div class="portfolio-card__overlay--relative">
-                                    <img class="portfolio-card__img" src="./images/portfolio/img-02.jpg"
-                                        alt="Дизайн: Постер New Orlean vs Golden Star">
+                                    <picture>
+                                        <source
+                                            srcset="./images/portfolio/desktop/img-02.jpg 1x, ./images/portfolio/desktop/x2/img-1.jpg x2"
+                                            media="(min-width: 1200px)" type="image/jpeg" />
+                                        <source
+                                            srcset="./images/portfolio/tablet/img-1.jpg 1x, ./images/portfolio/tablet/x2/img-1.jpg x2"
+                                            media="(min-width: 768px)" type="image/jpeg" />
+                                        <source
+                                            srcset="./images/portfolio/mobile/img-1.jpg 1x, ./images/portfolio/mobile/x2/img-1.jpg x2"
+                                            media="(max-width: 767.98px)" type="image/jpeg" />
+
+
+                                        <img class="portfolio-card__img" src="./images/portfolio/desktop/img-02.jpg"
+                                            alt="Дизайн: Постер New Orlean vs Golden Star">
+                                    </picture>
                                     <div class="portfolio-card__overlay">
                                         <p class="portfolio-card__overlay__text">Технокряк это современная площадка
                                             распространения

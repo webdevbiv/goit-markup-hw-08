@@ -31,7 +31,7 @@
         <ul class="address-header  list">
           <li class="address-header__item ">
             <a class="address-header__link" href="mailto:info@devstudio.com" target="_blank" rel="noopener noreferrer">
-              <svg class="address-header__icon" width="16" height="12">
+              <svg class="address-header__icon address-header__icon--email">
                 <use href="./images/icons.svg#icon-svg-01"></use>
               </svg>
               info@devstudio.com
@@ -39,10 +39,70 @@
           </li>
           <li class="ddress-header__item">
             <a class="address-header__link" href="tel:+380961111111" target="_blank" rel="noopener noreferrer">
-              <svg class="address-header__icon" width="10" height="16">
+              <svg class="address-header__icon address-header__icon--phone">
                 <use href="./images/icons.svg#icon-svg-02"></use>
               </svg>
               +38 096 111 11 11
+            </a>
+          </li>
+        </ul>
+        <button class="mobile-menu__button" data-menu-button>
+          <svg class="mobile-menu__icon">
+            <use class="mobile-menu__icon-menu mobile-menu__icon-size" href="./images/mobile.svg#icon-menu"></use>
+            <use class="mobile-menu__icon-close mobile-menu__icon-size" href="./images/mobile.svg#icon-close"></use>
+          </svg>
+          <!-- <svg class="mobile-menu__icon">
+            <use class="mobile-menu__icon-close mobile-menu__icon-size" href="./images/mobile.svg#icon-close"></use>
+          </svg> -->
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu-window" data-menu>
+      <div class="mobile-menu-window__container">
+        <ul class="mobile-menu-window__list list">
+          <li class="mobile-menu-window__item">
+            <a class="mobile-menu-window__link" href="./index.html">Студия</a>
+          </li>
+          <li class="mobile-menu-window__item">
+            <a class="mobile-menu-window__link" href="./portfolio.html">Портфолио</a>
+          </li>
+          <li class="mobile-menu-window__item">
+            <a class="mobile-menu-window__link " href="">Контакты</a>
+          </li>
+        </ul>
+        <ul class="mobile-menu-window-address__list  list">
+          <li class="mobile-menu-window-address__item ">
+            <a class="mobile-menu-window-address__link mobile-menu-window-address__link--text-size-large"
+              href="mailto:info@devstudio.com" target="_blank" rel="noopener noreferrer">
+              +38 096 111 11 11
+            </a>
+          </li>
+          <li class="mobile-menu-window-address__item">
+            <a class="mobile-menu-window-address__link mobile-menu-window-address__link--text-size-small"
+              href="tel:+380961111111" target="_blank" rel="noopener noreferrer">
+              info@devstudio.com
+            </a>
+          </li>
+        </ul>
+        <ul class="mobile-menu-window-social_list list">
+          <li class="mobile-menu-window-social__item">
+            <a href="" class="mobile-menu-window-social__link" target="_blank" rel="noopener noreferrer">
+              Instagram
+            </a>
+          </li>
+          <li class="mobile-menu-window-social__item ">
+            <a href="" class="mobile-menu-window-social__link" target="_blank" rel="noopener noreferrer">
+              Twitter
+            </a>
+          </li>
+          <li class="mobile-menu-window-social__item ">
+            <a href="" class="mobile-menu-window-social__link" target="_blank" rel="noopener noreferrer">
+              Facebook
+            </a>
+          </li>
+          <li class="mobile-menu-window-social__item ">
+            <a href="" class="mobile-menu-window-social__link" target="_blank" rel="noopener noreferrer">
+              LinkedIn
             </a>
           </li>
         </ul>
@@ -51,7 +111,6 @@
   </header>
 
   <main>
-
     <section class="hero">
       <div class="container">
         <h1 class="hero__title">
@@ -511,6 +570,7 @@
     </div>
   </footer>
   <script src="./js/modal.js"></script>
+  <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
