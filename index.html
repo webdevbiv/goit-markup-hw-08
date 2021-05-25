@@ -185,7 +185,10 @@
 
         <ul class="benefits__list list">
           <li class="benefits__item">
-            <img src="./images/we-do/img-01.jpg" alt="Десктопные приложения" />
+            <picture>
+
+              <img src="./images/we-do/img-01.jpg" alt="Десктопные приложения" />
+            </picture>
             <div class="benefits__overlay">
               <p class="benefits__text">Десктопные приложения</p>
             </div>
@@ -215,7 +218,15 @@
 
         <ul class="team__list list">
           <li class="team__item">
-            <img class="team__image" src="./images/team/img-01.jpg" alt="Игорь Демьяненко" />
+            <picture>
+              <source srcset="./images/team/desktop/img.jpg 1x, ./images/team/desktop/2x/img.jpg 2x"
+                media="(min-width: 1200px)" type="image/jpeg" />
+              <source srcset="./images/team/tablet/img.jpg 1x, ./images/team/tablet/2x/img.jpg 2x"
+                media="(min-width: 768px)" type="image/jpeg" />
+              <source srcset="./images/team/mobile/img.jpg 1x, ./images/team/mobile/2x/img.jpg 2x"
+                media="(max-width: 767.98px)" type="image/jpeg" />
+              <img class="team__image" src="./images/team/mobile/img.jpg" alt="Игорь Демьяненко" />
+            </picture>
             <div class="team__description">
               <h3 class="team__name">Игорь Демьяненко</h3>
               <p class="team__position">Product Designer</p>
@@ -255,7 +266,15 @@
           </li>
 
           <li class="team__item">
-            <img class="team__image" src="./images/team/img-02.jpg" alt="Ольга Репина" />
+            <picture>
+              <source srcset="./images/team/desktop/img-1.jpg 1x, ./images/team/desktop/2x/img-1.jpg 2x"
+                media="(min-width: 1200px)" type="image/jpeg" />
+              <source srcset="./images/team/tablet/img-1.jpg 1x, ./images/team/tablet/2x/img-1.jpg 2x"
+                media="(min-width: 768px)" type="image/jpeg" />
+              <source srcset="./images/team/mobile/img-1.jpg 1x, ./images/team/mobile/2x/img-1.jpg 2x"
+                media="(max-width: 767.98px)" type="image/jpeg" />
+              <img class="team__image" src="./images/team/mobile/img-1.jpg" alt="Ольга Репина" />
+            </picture>
             <div class="team__description">
               <h3 class="team__name">Ольга Репина</h3>
               <p class="team__position">Frontend Developer</p>
@@ -295,7 +314,15 @@
           </li>
 
           <li class="team__item">
-            <img class="team__image" src="./images/team/img-03.jpg" alt="Николай Тарасов" />
+            <picture>
+              <source srcset="./images/team/desktop/img-2.jpg 1x, ./images/team/desktop/2x/img-2.jpg 2x"
+                media="(min-width: 1200px)" type="image/jpeg" />
+              <source srcset="./images/team/tablet/img-2.jpg 1x, ./images/team/tablet/2x/img-2.jpg 2x"
+                media="(min-width: 768px)" type="image/jpeg" />
+              <source srcset="./images/team/mobile/img-2.jpg 1x, ./images/team/mobile/2x/img-2.jpg 2x"
+                media="(max-width: 767.98px)" type="image/jpeg" />
+              <img class="team__image" src="./images/team/mobile/img-2.jpg" alt="Николай Тарасов" />
+            </picture>
             <div class="team__description">
               <h3 class="team__name">Николай Тарасов</h3>
               <p class="team__position">Marketing</p>
@@ -335,7 +362,15 @@
           </li>
 
           <li class="team__item">
-            <img class="team__image" src="./images/team/img-04.jpg" alt="Михаил Ермаков" />
+            <picture>
+              <source srcset="./images/team/desktop/img-3.jpg 1x, ./images/team/desktop/2x/img-3.jpg 2x"
+                media="(min-width: 1200px)" type="image/jpeg" />
+              <source srcset="./images/team/tablet/img-3.jpg 1x, ./images/team/tablet/2x/img-3.jpg 2x"
+                media="(min-width: 768px)" type="image/jpeg" />
+              <source srcset="./images/team/mobile/img-3.jpg 1x, ./images/team/mobile/2x/img-3.jpg 2x"
+                media="(max-width: 767.98px)" type="image/jpeg" />
+              <img class="team__image" src="./images/team/mobile/img-3.jpg" alt="Михаил Ермаков" />
+            </picture>
             <div class="team__description">
               <h3 class="team__name">Михаил Ермаков</h3>
               <p class="team__position">UI Designer</p>
