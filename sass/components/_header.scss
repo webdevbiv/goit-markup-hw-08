@@ -183,6 +183,9 @@
     fill: $icons-color-accent;
     @include transition-normal(fill);
   }
+  @media screen and (max-width: 200px) {
+    display: none;
+  }
 }
 
 .address-header__link {
