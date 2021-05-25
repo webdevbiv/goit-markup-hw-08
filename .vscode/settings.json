@@ -16,5 +16,14 @@
     "liveSassCompile.settings.autoprefix": [
         "> 1%",
         "last 2 versions"
+    ],
+    "spellright.language": [
+        "ru"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext",
+        "html"
     ]
 }

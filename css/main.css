@@ -255,6 +255,14 @@ body {
   color: #212121;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
+body.menu-is-open {
+  overflow: hidden;
+}
+
 .dev-outr {
   border: 1px solid red;
 }
@@ -361,6 +369,10 @@ body {
     padding-top: 25px;
     padding-bottom: 25px;
   }
+}
+
+.header.menu-is-open {
+  overflow: hidden;
 }
 
 .logo {
@@ -649,6 +661,7 @@ body {
 
 .mobile-menu__icon-close {
   display: none;
+  top: 0;
 }
 
 .is-open .mobile-menu__icon-close {
@@ -673,7 +686,7 @@ body {
   height: 100vh;
   background-color: #ffffff;
   z-index: 88;
-  overflow: hidden;
+  overflow-y: scroll;
   -webkit-transition: left 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: left 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1593,6 +1606,7 @@ body {
 
 .modal-window__backdrop {
   position: fixed;
+  overflow-y: scroll;
   top: 0;
   left: 0;
   width: 100%;

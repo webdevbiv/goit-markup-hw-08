@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./css/main.min.css" />
 </head>
 
-<body>
+<body data-menu-page>
   <header class="border">
     <div class="container">
       <div class="header ">
@@ -46,10 +46,10 @@
             </a>
           </li>
         </ul>
-        <button class="mobile-menu__button" data-menu-button>
-          <svg class="mobile-menu__icon">
+        <button class="mobile-menu__button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+          <svg class="mobile-menu__icon" width="40" height="40" aria-label="Переключатель мобильного меню">
             <use class="mobile-menu__icon-menu mobile-menu__icon-size" href="./images/mobile.svg#icon-menu"></use>
-            <use class="mobile-menu__icon-close mobile-menu__icon-size" href="./images/mobile.svg#icon-close"></use>
+            <use class="mobile-menu__icon-close mobile-menu__icon-size " href="./images/mobile.svg#icon-close"></use>
           </svg>
           <!-- <svg class="mobile-menu__icon">
             <use class="mobile-menu__icon-close mobile-menu__icon-size" href="./images/mobile.svg#icon-close"></use>
@@ -57,7 +57,7 @@
         </button>
       </div>
     </div>
-    <div class="mobile-menu-window" data-menu>
+    <div class="mobile-menu-window" id="menu-container" data-menu>
       <div class="mobile-menu-window__container">
         <ul class="mobile-menu-window__list list">
           <li class="mobile-menu-window__item">

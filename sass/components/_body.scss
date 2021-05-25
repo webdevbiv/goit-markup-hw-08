@@ -8,6 +8,14 @@ body {
   color: $text-color-main;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
+body.menu-is-open {
+  overflow: hidden;
+}
+
 .dev-outr {
   border: 1px solid red;
 }
