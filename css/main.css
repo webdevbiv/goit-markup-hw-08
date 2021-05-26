@@ -779,6 +779,7 @@ body.menu-is-open {
 .mobile-menu-window-social__item:not(:last-child):after {
   position: absolute;
   content: "";
+  top: 0;
   width: 1px;
   height: 100%;
   right: -10px;
