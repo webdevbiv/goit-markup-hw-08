@@ -9,14 +9,24 @@
   cursor: pointer;
   z-index: 81;
   @include transition-normal(fill);
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 767.9px) {
     display: none;
   }
 
+  &.is-open {
+    display: block;
+  }
   &.is-open .mobile-menu__icon-menu {
     display: none;
   }
-
+  &.is-open .mobile-menu__icon-close {
+    display: block;
+  }
+  &.is-open .mobile-menu__icon-close {
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
   &:hover,
   &:focus {
     fill: $text-color-accent;

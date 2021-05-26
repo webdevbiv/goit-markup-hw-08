@@ -164,8 +164,9 @@
 }
 
 .subscribe-email {
-  margin-right: 12px;
+  margin-right: 0px;
   grid-area: subscribe-email;
+
   @media screen and (min-width: 50px) and (max-width: 1199.99px) {
     margin-right: 0;
   }
@@ -179,6 +180,13 @@
   @media screen and (min-width: 50px) and (max-width: 1199.99px) {
     display: flex;
     justify-content: center;
+  }
+}
+
+.subscribe-email__lablel-input-button-wrap {
+  display: flex;
+  @media screen and (min-width: 50px) and (max-width: 1199.99px) {
+    flex-direction: column;
   }
 }
 .subscribe-email__label {
@@ -230,6 +238,7 @@
 
   @media screen and (min-width: 1200px) {
     width: 358px;
+    margin-right: 12px;
   }
 }
 
@@ -244,7 +253,7 @@
   @media screen and (min-width: 768px) and (max-width: 1199.99px) {
   }
   @media screen and (min-width: 1200px) {
-    margin-top: 34px;
+    //  margin-top: 34px;
   }
 }
 
@@ -254,6 +263,9 @@
   @include transition-normal(background);
 
   @media screen and (min-width: 50px) and (max-width: 767.99px) {
+    width: 200px;
+  }
+  @media screen and (min-width: 768px) {
     width: 200px;
   }
 }
